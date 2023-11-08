@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 
 const Formulario = () => {
-  const [nombre, setNombre] = useState (" ");
+  const [nombre, setNombre] = useState ("");
+
 
   return (
     <div className="md:w-1/2 lg:w-2/5">
@@ -22,6 +23,8 @@ const Formulario = () => {
           type="text"
           placeholder="Nombre de la mascota"
           className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+          value={nombre}
+          onChange={ () => console.log("Escribiendo ...") }
         />
       </div>
 
